@@ -1,3 +1,4 @@
+
 const lsLocation = localStorage.getItem('location')
 const domData = document.querySelector('.domData')
 const form = document.querySelector('form')
