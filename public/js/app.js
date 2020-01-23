@@ -27,7 +27,9 @@ const getWeather = (address) => {
 if (!lsLocation) {
     fetch('https://freegeoip.app/json/').then(response => {
         response.json().then(data => {
-            getWeather(data.city)
+            if (data.city === "") {
+                getWeather(data.city)
+            }
         })
     })
 } else {
