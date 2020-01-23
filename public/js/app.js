@@ -28,9 +28,9 @@ if (!lsLocation) {
     fetch('https://freegeoip.app/json/').then(response => {
         response.json().then(data => {
             if (data.city === "") {
-                getWeather(data.city)
-            } else {
                 domData.innerHTML = `<p class="lead">Can't fetch your location automatically. Please enter your location</p>`
+            } else {
+                getWeather(data.city)
             }
         })
     })
