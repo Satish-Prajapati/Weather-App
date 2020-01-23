@@ -29,6 +29,8 @@ if (!lsLocation) {
         response.json().then(data => {
             if (data.city === "") {
                 getWeather(data.city)
+            } else {
+                domData.innerHTML = `<p class="lead">Can't fetch your location automatically. Please enter your location</p>`
             }
         })
     })
